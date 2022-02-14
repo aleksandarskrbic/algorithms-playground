@@ -5,12 +5,14 @@ from typing import List
 def is_valid_subsequence_1(array: List[int], sequence: List[int]) -> bool:
     seq_idx = 0
     arr_idx = 0
+
     while seq_idx < len(sequence) and arr_idx < len(array):
         if sequence[seq_idx] == array[arr_idx]:
             seq_idx += 1
             arr_idx += 1
         else:
             arr_idx += 1
+
     return seq_idx == len(sequence)
 
 
@@ -21,7 +23,6 @@ def is_valid_subsequence_2(array: List[int], sequence: List[int]) -> bool:
     for num in array:
         if seq_idx == len(sequence):
             return True
-
         if sequence[seq_idx] == num:
             seq_idx += 1
 

@@ -30,7 +30,6 @@ def two_number_sum_2(array: List[int], target_sum: int) -> List[int]:
 # O(nLog(n)) time | O(1) space
 def two_number_sum_3(array: List[int], target_sum: int) -> List[int]:
     array.sort()
-
     left_idx = 0
     right_idx = len(array) - 1
 

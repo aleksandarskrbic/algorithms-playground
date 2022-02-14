@@ -2,6 +2,7 @@ from cgitb import small
 from typing import List
 
 
+# O(n) time | O(n) space
 def sorted_squared_array(array: List[int]) -> List[int]:
     squared = [0 for _ in array]
     smaller_idx = 0
