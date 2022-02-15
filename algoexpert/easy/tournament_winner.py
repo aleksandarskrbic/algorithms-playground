@@ -6,10 +6,10 @@ def tournament_winner(competitions: List[List[str]], results: List[int]) -> str:
     current_best_team = ""
     score_board = {current_best_team: 0}
 
-    for (competition, result) in zip(competitions, results):
+    for (idx, competition) in enumerate(competitions):
         home_team, away_team = competition
 
-        winner = home_team if result == 1 else away_team
+        winner = home_team if results[idx] == 1 else away_team
 
         if winner not in score_board:
             score_board[winner] = 0
