@@ -1,7 +1,7 @@
 from typing import List
 
 
-#
+# O(n) time | O(k) space, n - number of competitions, k - number of teams
 def tournament_winner(competitions: List[List[str]], results: List[int]) -> str:
     current_best_team = ""
     score_board = {current_best_team: 0}
